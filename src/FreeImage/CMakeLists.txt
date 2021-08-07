@@ -536,6 +536,10 @@ if (OGRE_PROJECT_FOLDERS)
 	set_property(TARGET FreeImage PROPERTY FOLDER Dependencies)
 endif ()
 
+if(WIN32)
+	add_definitions(-DWIN32)
+endif()
+
 install_dep(FreeImage include Source/FreeImage.h)
 
 if (APPLE)
